@@ -1,0 +1,31 @@
+#include<iostream>
+#include<assert.h>
+using namespace std;
+void state(int n) {
+	int c = 0;
+	assert(n != 0);
+	for (int i = 1; i <= n; i++)
+	{
+		if (n % i == 0) {
+			c++;
+		}
+	}
+	if (c % 2 == 0)
+	{
+		cout << "no";
+	}
+	else {
+		cout << "yes";
+	}
+}
+int main() {
+	unsigned int n ;
+	for (int i = 1; i <= 10; i++)
+	{
+		n = rand() % 30;
+		cout << n << " : ";
+		state(n);
+		cout << endl;
+	}
+	
+}
